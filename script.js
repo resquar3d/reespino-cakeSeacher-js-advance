@@ -4,7 +4,7 @@ const recipes = [
     name: 'Flan Perfect Cake',
     author: 'Romy Espino',
     ingredients: ['Eggs', 'Milk', 'Sugar'],
-    image: '/images/flanperfect.png',
+    image: '/image/flanperfect.png',
     servings: 6,
     prepTime: '1 hr',
     tags: ['Creamy', 'Classic']
@@ -13,7 +13,7 @@ const recipes = [
     name: 'Pineapple Upside Down Cake',
     author: 'Romy Espino',
     ingredients: ['Pineapple', 'Flour', 'Sugar'],
-    image: '/images/pineappleupsidedown.png',
+    image: '/image/pineappleupsidedown.png',
     servings: 8,
     prepTime: '1 hr',
     tags: ['Tropical', 'Classic']
@@ -22,7 +22,7 @@ const recipes = [
     name: 'Carrot Mousse Cake Delight',  
     author: 'Romy Espino',
     ingredients: ['Carrots', 'Flour', 'Sugar'],
-    image: '/images/carrotmousecake.png',
+    image: '/image/carrotmousecake.png',
     servings: 8,
     prepTime: '1 hr',
     tags: ['Spiced', 'Classic']
@@ -31,7 +31,7 @@ const recipes = [
       name: 'Vanilla Dream Cake',
       author: 'Berry Minelli',
       ingredients: ['Flour','Eggs','Vanilla'],
-      image: '/images/vanilladream.png',
+      image: '/image/vanilladream.png',
       servings: 6,
       prepTime: '30 mins',
       tags: ['Classic', 'Quick']
@@ -40,7 +40,7 @@ const recipes = [
     name: 'Purple Yam Flan Cake',
     author: 'Romy Espino',
     ingredients: ['Purple Yam', 'Eggs', 'Sugar'],
-    image: '/images/purpleyamflan.png',
+    image: '/image/purpleyamflan.png',
     servings: 6,
     prepTime: '1 hr',
     tags: ['Creamy', 'Classic']
@@ -49,7 +49,7 @@ const recipes = [
       name: 'Strawberry Shortcake',
       author: 'Nigella Stragetella',
       ingredients: ['Strawberries','Cream','Biscuits'],
-      image: '/images/strawberryshort.png',
+      image: '/image/strawberryshort.png',
       servings: 4,
       prepTime: '20 mins',
       tags: ['Fruity', 'Classic']
@@ -58,7 +58,7 @@ const recipes = [
       name: 'Lemon Tart Bliss',
       author: 'Berry Minelli',
       ingredients: ['Lemon', 'Sugar', 'Butter'],
-      image: '/images/lemontartbliss.png',
+      image: '/image/lemontartbliss.png',
       servings: 6,
       prepTime: '35 mins',
       tags: ['Tangy', 'Quick']
@@ -67,7 +67,7 @@ const recipes = [
       name: 'Coconut Dream Pie',
       author: 'Nigella Stragetella',
       ingredients: ['Coconut', 'Cream', 'Pastry'],
-      image: '/images/coconutdream.png',
+      image: '/image/coconutdream.png',
       servings: 6,
       prepTime: '50 mins',
       tags: ['Tropical', 'Creamy']
@@ -76,7 +76,7 @@ const recipes = [
       name: 'Banana Bread Delight',
       author: 'Oliver Jamesson',
       ingredients: ['Bananas', 'Flour', 'Honey'],
-      image: '/images/bananabread.png',
+      image: '/image/bananabread.png',
       servings: 8,
       prepTime: '55 mins',
       tags: ['Healthy', 'Classic']
@@ -85,7 +85,7 @@ const recipes = [
       name: 'Cherry Cheesecake',
       author: 'Berry Minelli',
       ingredients: ['Cherries', 'Cheese', 'Crust'],
-      image: '/images/cherrycheese.png',
+      image: '/image/cherrycheese.png',
       servings: 6,
       prepTime: '40 mins',
       tags: ['Sweet', 'Chilled']
@@ -94,7 +94,7 @@ const recipes = [
       name: 'Peach Cobbler',
       author: 'Nigella Stragetella',
       ingredients: ['Peaches', 'Butter', 'Cinnamon'],
-      image: '/images/peachcobbler.png',
+      image: '/image/peachcobbler.png',
       servings: 6,
       prepTime: '50 mins',
       tags: ['Warm', 'Classic']
@@ -103,7 +103,7 @@ const recipes = [
       name: 'Apple Crumble',
       author: 'Oliver Jamesson',
       ingredients: ['Apples', 'Oats', 'Sugar'],
-      image: '/images/applecrumble.png',
+      image: '/image/applecrumble.png',
       servings: 5,
       prepTime: '45 mins',
       tags: ['Comfort', 'Quick']
@@ -112,7 +112,7 @@ const recipes = [
       name: 'Mango Mousse',
       author: 'Berry Minelli',
       ingredients: ['Mango', 'Cream', 'Gelatin'],
-      image: '/images/mangomousse.png',
+      image: '/image/mangomousse.png',
       servings: 4,
       prepTime: '30 mins',
       tags: ['Fruity', 'Light']
@@ -121,7 +121,7 @@ const recipes = [
       name: 'Blueberry Muffins Deluxe',
       author: 'Nigella Stragetella',
       ingredients: ['Blueberries', 'Flour', 'Milk'],
-      image: '/images/blueberrymuffins.png',
+      image: '/image/blueberrymuffins.png',
       servings: 12,
       prepTime: '25 mins',
       tags: ['Baked', 'Berry']
@@ -130,7 +130,7 @@ const recipes = [
       name: 'Tiramisu Deluxe',
       author: 'Oliver Jamesson',
       ingredients: ['Mascarpone', 'Coffee', 'Cocoa'],
-      image: '/images/tiramisu.png',
+      image: '/image/tiramisu.png',
       servings: 6,
       prepTime: '1 hr',
       tags: ['Italian', 'Chilled']
@@ -139,7 +139,7 @@ const recipes = [
       name: 'Chocolate Combo Lava Cake',
       author: 'Romy Espino',
       ingredients: ['Chocolate', 'Eggs', 'Flour'],
-      image: '/images/cholatecombilava.png',
+      image: '/image/cholatecombilava.png',
       servings: 4,
       prepTime: '30 mins',
       tags: ['Rich', 'Chocolate']
