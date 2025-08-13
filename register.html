@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Recipe Masterpiece</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #strengthIndicator {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: gray;
+    }
+    .weak { color: red; }
+    .medium { color: orange; }
+    .strong { color: green; }
+  </style>
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <h2>🍰 Create Your Recipe Profile</h2>
+    <form class="auth-form" onsubmit="registerUser(); return false;">
+      <input type="text" id="fullname" placeholder="Full Name" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <div style="position: relative;">
+        <input type="password" id="password" placeholder="Password" oninput="checkStrength(this.value)" required />
+        <span onclick="togglePassword()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
+      </div>
+      <div id="strengthIndicator"></div>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+      <p id="auth-message"></p>
+    </form>
+  </div>
+
+  <script>
+    function registerUser() {
+      const fullName = document.getElementById('fullname').value;
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!fullName || !username || !email || !password) {
+        return document.getElementById('auth-message').innerText = "All fields are required.";
+      }
+
+      const user = { fullName, username, email, password };
+      localStorage.setItem("userProfile", JSON.stringify(user));
+      localStorage.setItem("user", "true");
+
+      window.location.href = "index.html";
+    }
+
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+
+    function checkStrength(pwd) {
+      const indicator = document.getElementById("strengthIndicator");
+      let strength = 0;
+
+      if (pwd.length >= 6) strength++;
+      if (/[A-Z]/.test(pwd)) strength++;
+      if (/[0-9]/.test(pwd)) strength++;
+      if (/[^A-Za-z0-9]/.test(pwd)) strength++;
+
+      if (strength <= 1) {
+        indicator.textContent = "Password Strength: Weak";
+        indicator.className = "weak";
+      } else if (strength === 2 || strength === 3) {
+        indicator.textContent = "Password Strength: Medium";
+        indicator.className = "medium";
+      } else {
+        indicator.textContent = "Password Strength: Strong";
+        indicator.className = "strong";
+      }
+    }
+  </script>
+</body>
+</html>

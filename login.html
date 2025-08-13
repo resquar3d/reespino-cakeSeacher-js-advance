@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Recipe Masterpiece</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <h2>👨‍🍳 Recipe Masterpiece</h2>
+    <div class="auth-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <div style="position: relative;">
+        <input type="password" id="password" placeholder="Password" required />
+        <span onclick="togglePassword()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">👁️</span>
+      </div>
+      <label style="margin-top: 10px;"><input type="checkbox" id="rememberMe"> Remember me</label>
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+      <p id="auth-message"></p>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const remember = document.getElementById('rememberMe').checked;
+
+      const storedUser = JSON.parse(localStorage.getItem("userProfile"));
+
+      if (!storedUser || storedUser.email !== email || storedUser.password !== password) {
+        return showError("Invalid credentials. Please check and try again.");
+      }
+
+      // Fix: restore userProfile on login
+      localStorage.setItem("userProfile", JSON.stringify(storedUser));
+
+      if (remember) {
+        localStorage.setItem("user", "true");
+      } else {
+        sessionStorage.setItem("user", "true");
+      }
+
+      window.location.href = "index.html";
+    }
+
+    function togglePassword() {
+      const pwd = document.getElementById("password");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+
+    function showError(msg) {
+      document.getElementById("auth-message").innerText = msg;
+    }
+  </script>
+</body>
+</html>

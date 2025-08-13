@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Masterpiece</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <header>
+    <h1>🍰 Dessert Recipe Masterpiece 🍰</h1>
+  </header>
+  <nav>
+    <div class="nav-links">
+      <button onclick="redirectToLogin()">Login</button>
+      <button onclick="logout()">Logout</button>
+      <button onclick="viewAllRecipes()">All Recipes</button>
+      <button onclick="viewFavorites()">Favorites ❤️</button>
+      <button onclick="toggleDarkMode()">🌓</button>
+    </div>
+    <div id="userStatus" class="user-status"></div>
+  </nav>
+  <section class="controls">
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchBox" placeholder="Search recipes..." oninput="searchRecipes()" />
+    </div>
+    <select id="authorFilter" onchange="filterByAuthor()">
+      <option value="">All Authors</option>
+    </select>
+  </section>
+    <!-- Featured Most Rated Cake -->
+    <section class="featured-section">
+      <h2 class="featured-heading">🎖 Top Rated Dessert 🧑‍🍳</h2>
+      <div id="featuredCake"></div>
+    </section>
+  <main>
+    <div id="recipeGrid" class="grid"></div>
+  </main>
+  <footer>
+    <p>© 2025 R.E Espino | Pastry Go Recipe Management. Bon appétit!</p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="social-sidebar">
+    <h3>Follow Us!</h3>
+    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
